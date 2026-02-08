@@ -19,7 +19,7 @@ I successfully deployed the Bastion, configured local and domain authentication,
 Instead of managing local users manually, I integrated the Bastion with the corporate Active Directory. This required configuring the LDAP binding to the Domain Controller and verifying the connection.
 
 ![Active Directory Integration Success](images/ad-auth-success.png)
-*Evidence: Successful authentication connection between WALLIX Bastion and the AD Domain Controller.*
+*Successful authentication connection between WALLIX Bastion and the AD Domain Controller.*
 
 ### 2. Access Control Logic (RBAC)
 I implemented Role-Based Access Control (RBAC) by mapping external AD security groups to internal Bastion profiles.
@@ -27,13 +27,13 @@ I implemented Role-Based Access Control (RBAC) by mapping external AD security g
 * **Destination:** Bastion Profile `product_administrator`
 
 ![Group Mapping Policy](images/group-mapping-policy.png)
-*Evidence: Mapping external identity groups to internal security profiles.*
+* Mapping external identity groups to internal security profiles.*
 
 ### 3. Secure Session Management
 Users authenticate against the Bastion using their standard domain credentials. The Bastion then proxies the connection to the target server, ensuring the actual target credentials are never exposed to the end-user.
 
 ![Secure Bastion Login](images/bastion-login-screen.png)
-*Evidence: The WALLIX monitored login portal protecting access to the target Windows Server.*
+* The WALLIX monitored login portal protecting access to the target Windows Server.*
 
 ---
 
