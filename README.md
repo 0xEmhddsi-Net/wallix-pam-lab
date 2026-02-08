@@ -23,7 +23,7 @@ Instead of managing local users manually, I integrated the Bastion with the corp
 
 ### 2. Access Control Logic (RBAC)
 I implemented Role-Based Access Control (RBAC) by mapping external AD security groups to internal Bastion profiles.
-* **Source:** AD Group `CN=Wallix_Group,CN=Users,DC=Adatum,DC=com`
+* **Source:** AD Group `CN=Group,CN=Users,DC=Domain,DC=com`
 * **Destination:** Bastion Profile `product_administrator`
 
 ![Group Mapping Policy](images/group-mapping-policy.png)
